@@ -19,15 +19,12 @@
 // @grant           GM_addStyle
 // ==/UserScript==
 
-
 (function () {
   "use strict";
-  const classList = [
-    '#secondary'
-  ];
+  const classList = ["#secondary"];
 
   const styleGenerator = (classList) => {
-    let className = '';
+    let className = "";
     for (const clazz of classList) {
       if (className.length === 0) {
         className += clazz;
@@ -39,7 +36,7 @@
       ${className} {
         display: none !important;
       }
-    `
-  }
+    `;
+  };
   GM_addStyle(styleGenerator(classList));
 })();
